@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+var cars = ["Saab", "Volvo", "BMW"];
+cars.push("Lemon");         // or cars[cars.length] = "Lemon";
+document.getElementById("demo").innerHTML = cars;
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+document.getElementById("demo2").innerHTML = fruits;
+
+fLen = cars.length;
+text = "";
+for (i = 0; i < fLen; i++) {
+    text += cars[i] + "<br>";
+}
+document.getElementById("demo1").innerHTML = text;
+
+var fruitsa = ["Banana", "Orange", "Apple", "Mango"];
+delete fruitsa[0];
+document.getElementById("demo3").innerHTML = fruitsa;
+
+
+
+</script>
+</body>
+</html>
+

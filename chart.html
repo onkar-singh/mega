@@ -1,0 +1,89 @@
+<script type="text/javascript" src="loader.js"></script>
+
+       <div id="piechart" style="width: 600px; height: 450px;float: right;"></div>
+   
+<script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+</script>
+<style>
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+</head>
+<body>
+
+
+<!-- <div style="overflow-x:auto;"> -->
+<div style="float: left;">
+  <table>
+    <tr>
+      <th>Suject</th>
+      <th>Correct</th>
+      <th>Incorrect</th>
+      <th>Negative</th>
+      <th>Total Marks</th>
+      <th>Maxi. Marks</th>
+
+    </tr>
+    <tr>
+      <td>Reasoning</td>
+      <td>Smith</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      
+    </tr>
+    <tr>
+      <td>G.K.</td>
+      <td>Jackson</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+      <td>94</td>
+
+    </tr>
+    <tr>
+      <td>Techncal</td>
+      <td>Johnson</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+      <td>67</td>
+
+    </tr>
+  </table>
+</div>
+<!-- <input type="button" value="Print" onclick="window.print()"> -->
